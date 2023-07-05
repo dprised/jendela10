@@ -1,4 +1,4 @@
-name: Windows - Anydesk RDP
+name: Jendela10
 
 on:
   workflow_dispatch:
@@ -12,11 +12,11 @@ jobs:
     steps:
       - name: Downloading & Installing Essentials
         run: |
-          Invoke-WebRequest https://raw.githubusercontent.com/dprised/Anydesk-Windows-RDP/main/Downloads.bat -OutFile Downloads.bat
-          cmd /c Downloads.bat
+          Invoke-WebRequest https://raw.githubusercontent.com/dprised/jendela/main/dload.bat -OutFile dload.bat
+          cmd /c dload.bat
 
       - name: Log In To AnyDesk
-        run: cmd /c start.bat
+        run: cmd /c sload.bat
 
       - name: Time Counter
         run: Start-Sleep -Seconds 21600
